@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Horizontally Scrolling Site from CSS-Tricks</title>
+	
+	<link rel="stylesheet" href="css/styler.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script>
+	$(function(){
+		$("#wrap-me").wrapInner("<table class='timetable'><tr>");
+		$(".post").wrap("<td></td>");
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 30);
+			event.preventDefault();
+		});   
+	});
+	</script>
+</head>
+
+<body>
+	
+	<table cellspacing='30'><tr>
+		<td>
+			<div class="hello">
+				<h2>Hello, I'm</h2>
+				<h1><font color="red">Raph Del Villar</font></h1>
+				<h2>and I am a <font color="red">Software Developer</font></h2>
+
+				<div class="avatar img-circle"><img src="img/myself.jpg" alt="avatar" /></div>
+
+				<br/><br/>
+				<p>
+				I am a proven IT Specialist with experience in developing software and web applications as well as established operations leveraging expertise in organization, managing cloud servers, and problem solving to provide exceptional user support and assistance in resolving conflict.
+				</p>
+				<p>
+				Experience includes managing sensitive materials and providing after-hours support for clients. 
+				</p>
+
+				<!--
+				<div class="flag">
+					<img class="flag_l" src="img/flag/phflag.png"/>
+					<img class="flag_r" src="img/flag/qrflag.png"/>
+				</div>
+				-->
+
+			</div>
+		</td>
+		<td style="background-color: white; color: black; width: 2500px;">
+			<div class="timeline">
+				<h2 style="margin-top:1%; margin-left: 1%">about me</h2>
+				<div id="wrap-me">
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/baby.png" alt="baby" /></div>
+							<p class="description">"Born on February 9, 1991"</p>
+							<h3 class="year">1991</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/elementary.jpg" alt="elementary" /></div>
+							<p class="description">"Started elementary school"</p>
+							<h3 class="year">1997</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/highschool.jpg" alt="highschool" /></div>
+							<p class="description">"Started high school"</p>
+							<h3 class="year">2003</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/flash.png" alt="flash" /></div>
+							<p class="description">"Started interest in Flash"</p>
+							<h3 class="year">2004</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/asteroids.jpg" alt="asteroids" /></div>
+							<p class="description">"Successfully recreated Asteroid game"</p>
+							<h3 class="year">2004</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/ust.png" alt="ust" /></div>
+							<p class="description">"Started college"</p>
+							<h3 class="year">2007</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/code.jpg" alt="freelance" /></div>
+							<p class="description">"Started doing freelance work"</p>
+							<h3 class="year">2007</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/ohsi.png" alt="ohsi" /></div>
+							<p class="description">"Started internship with OHSI"</p>
+							<h3 class="year">2011</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/dmci.png" alt="dmci" /></div>
+							<p class="description">"Finished Thesis on <span title="Supply Chain Management">SCM</span> with DMCI"</p>
+							<h3 class="year">2014</h3>
+						</center>
+					</div>
+					<div class="post">
+						<center>
+							<div class="logo-align avatar img-circle"><img src="img/timeline/hpe.jpg" alt="hpe" /></div>
+							<p class="description">"Started work at <span title="Hewlett-Packard Enterprise">HPE</span>"</p>
+							<h3 class="year">2014</h3>
+						</center>
+					</div>
+				</div>
+			</div>
+		</td>
+		<td style="width: 5200px;">
+			<div class="project">
+				<h2 style="margin-top:1%; margin-left: 1%">work</h2>
+				<div id="wrap-me">
+					<div class="post">
+						<img src="img/laptop/project1.png" class="imgproject"/>
+						<center><h3>
+						<i class="fa fa-angle-left" style="float:left" aria-hidden="true"></i> 
+						DM ROTA 
+						<i class="fa fa-angle-right" style="float:right"  aria-hidden="true"></i></h3></center>
+					</div>
+				</div>
+			</div>	
+		</td>
+	</tr></table>
+	
+</body>
+
+</html>

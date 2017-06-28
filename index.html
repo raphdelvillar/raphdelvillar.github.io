@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Raph del Villar - My Online Resume</title>
+	
+	<link rel="stylesheet" href="css/styler.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		for(i = 2; i <= 17; i++){
+			$("#project" + i).hide();
+		}
+	});
+
+	$(function(){
+		$("#wrap-me").wrapInner("<table class='timetable'><tr>");
+		$(".post").wrap("<td></td>");  
+	});
+
+	var x = 1;
+	function nav(type){
+		var i;
+		if(type == "left"){
+			i = x;
+			$("#project" + i).hide();
+			i--;
+			if(i == 0){
+				$("#project17").fadeIn("slow");
+				x = 17;
+			}else{
+				$("#project" + i).fadeIn("slow");
+				x = i;
+			}
+		}else{
+			i = x;
+			$("#project" + i).hide();
+			i++;
+			if(i > 17){
+				$("#project1").fadeIn("slow");
+				x = 1;
+			}else{
+				$("#project" + i).fadeIn("slow");
+				x = i;
+			}
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<center><img src="img/picture.png" id="profpic"/></center>
+	<div id="about"><br/>
+		<div style="float: left; margin-left: 5%; margin-top: 2%">
+			<h2>Hello, I'm</h2>
+			<h1><font color="red">Raph del Villar</font></h1>
+			<h2>and I am a <font color="red">Software Developer</font></h2>
+		</div>
+		<div style="float: right">
+			<h2 style="margin-top: 2%">about me</h2>
+			<br/>
+			<p>
+			I am a proven IT Specialist with experience in developing software <br/>and web applications as well as established operations leveraging <br/>expertise in organization, managing cloud servers, and problem solving <br/>to provide exceptional user support
+			and assistance in resolving conflict.
+			</p>
+			<p>
+			Experience includes managing sensitive materials and providing <br/>after-hours support for clients. 
+			</p>
+		</div>
+	</div>
+	<!-- TIMELINE START -->
+	<div id="timeline"><br/>
+		<div id="wrap-me">
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/baby.png" alt="baby" /></div>
+					<p class="description">"Born on February 9, 1991"</p>
+					<h3 class="year">1991</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/elementary.jpg" alt="elementary" /></div>
+					<p class="description">"Started elementary school"</p>
+					<h3 class="year">1997</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/highschool.jpg" alt="highschool" /></div>
+					<p class="description">"Started high school"</p>
+					<h3 class="year">2003</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/flash.png" alt="flash" /></div>
+					<p class="description">"Started interest in Flash"</p>
+					<h3 class="year">2004</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/asteroids.jpg" alt="asteroids" /></div>
+					<p class="description">"Successfully recreated Asteroid game"</p>
+					<h3 class="year">2004</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/ust.png" alt="ust" /></div>
+					<p class="description">"Started college - BS IS"</p>
+					<h3 class="year">2007</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/code.jpg" alt="freelance" /></div>
+					<p class="description">"Started doing freelance work"</p>
+					<h3 class="year">2007</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/ohsi.png" alt="ohsi" /></div>
+					<p class="description">"Started internship with OHSI"</p>
+					<h3 class="year">2011</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/dmci.png" alt="dmci" /></div>
+					<p class="description">"Finished Thesis on <span title="Supply Chain Management">SCM</span> with DMCI"</p>
+					<h3 class="year">2014</h3>
+				</center>
+			</div>
+			<div class="post">
+				<center>
+					<div class="logo-align avatar img-circle"><img src="img/timeline/hpe.jpg" alt="hpe" /></div>
+					<p class="description">"Started work at <span title="Hewlett-Packard Enterprise">HPE</span>"</p>
+					<h3 class="year">2014</h3>
+				</center>
+			</div>
+
+		</div>
+	</div>
+	<!-- TIMELINE END -->
+	<!-- PROJECTS START -->
+	<div id="projects"><br/>
+		<center>
+		<h2 style="margin-top: 5%; margin-bottom: 1%">Projects</h2>
+		<div class="projects_container">
+			<div class="projects_arrow">
+				<i class="fa fa-angle-left fa-5x" aria-hidden="true" onclick="nav('left');"></i>
+			</div>
+
+			<div id="project1">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project1.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Duty Manager Rotation Scheduling Tool / DM ROTA Tool</h3>
+					<p>
+					The Duty Manager or DM is a point of contact for incoming issues or "tickets" raised by the end-user. 
+					Every branch of business has a DM assigned.
+					On a business standpoint if everything goes well, The DM will accept the ticket via the HP Service Manager 
+					software or SM9 and assign it to the right IT specialist. <br/><br/>
+					There are however certain occassions where the issue / ticket isn't correctly raised to the correct DM as there are too many branch to ask on which DM should take care of the ticket and it gets confusing.
+					<br/><br/>The DM ROTA Tool is a web application created to be a self-service portal wherein all the DM's for that day are recorded, 
+					At what time they will go to office? their contact number? their backup if one of them is on sick leave or on leave.
+					This will ensure that every ticket will be taken care of, effectively reducing SLA impact and increasing productivity. Ensuring the end-user that their issues are being taken care of. 
+					<br/><br/>Coded using HTML, CSS, PHP using CodeIgniter framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project2">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project2.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Automatic Ticket Assignment Tool or ATAT</h3>
+					<p>
+					HP uses a software called the HP Service Manager software or SM9 to <br/>
+					collect all the issues / ticket the end-user has raised.
+					<br/><br/>The Duty Manager or the DM, manually assigns these tickets to the right IT specialist.
+					<br/><br/>Being the DM is overwhelming since you handle everything from assigning tickets to <br/>informing your supervisor if there is a red alert ticket. This process is prone to human errors.
+					<br/><br/>ATAT is created to ensure to lift certain responsibilities from the DM, <br/>the machine will be the one to assign the ticket to the IT specialist using a system called the round robin assignment.
+					<br/><br/>This will ensure correct ticket distribution within the team and the knowledge to be spread out.
+					<br/><br/>Algorithm is coded using Python implementing the use of IMacro and OpenTwebst. <br/>Web Application is coded using HTML, CSS, PHP using CodeIgniter framework and MYSQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project3">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project3.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Job Monitoring Tool or Overwatch</h3>
+					<p>
+					The use of this tool is SAP related. <br/>
+					In a non-sap jargon, this tool monitors processes relating to finances, payroll, exchange rates etc.
+					<br/><br/>
+					From SAP, an email functionality is activated that will send the status of these processes in HTML format.<br/>
+					Using Python scripts, the data from the email will be extracted then be processed and saved into the database.
+					<br/><br/>
+					The user of the tool can set an alert if a certain process changes status (For example: Running to Failed)<br/>
+					If the process then meet the standard set by the user, the tool will then alert the user via email or sms.
+					<br/><br/>
+					The user that has been alerted by the tool can now act accordingly on what step to take. <br/>
+					Possibly to prevent an issue from happening or alert the higher management of a possible outbreak.
+					<br/><br/>
+					Algorithm is coded using Python. <br/>Web Application is coded using HTML, CSS, Javascript, Jquery, PHP using Laravel framework and MYSQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project4">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project4.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Root Cause Analysis and Incident Management Tool</h3>
+					<p>
+					For an average Incident Manager, consolidating and compiling every form answered for RCA is time consuming. 
+					<br/><br/>
+					Especially if you are running a large team.
+					<br/><br/>
+					The RCA and INM Tool was created as a portal to automatically gather the issues / ticket for analysis.<br/>
+					Once the ticket has been consolidated, the IT specialist will then be alerted.<br/>
+					Every team member will then analyze the ticket and when done will alert the INM Manager.
+					<br/><br/>
+					The INM Manager will then have the ticket compiled and organized into categories.<br/>
+					The compiled ticket can then be easily extracted into a formatted excel file to be sent to higher management for reporting.
+					<br/><br/>
+					Algorithm for extracting the ticket is coded using Python.<br/>
+					Web Application is coded using HTML, CSS, AngularJS, PHP using Laravel framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project5">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project5.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Scorecard Automation Tool</h3>
+					<p>
+					The Scorecard Automation Tool is created to measure Key Performance Indicator or KPI of the manager's employee.<br/><br/>
+					This is useful for year-end reviews of performance as there are many criteria to consider for promotions or bonuses.
+					<br/><br/>
+					The tool is used by the employee to enter the value or rating he/she received from the client.<br/>
+					The manager can then use the employee data to create a graphical representation of the KPI of every employee.
+					<br/><br/>
+					The manager will then know who are the employees that are performing and the employees who are not.
+					<br/><br/>
+					This tool will ensure manager visibility on his/her employees that can impact decision making.
+					<br/><br/>
+					Web Application is coded using HTML, CSS, AngularJS, PHP using Laravel framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project6">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project6.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>HUD Painter - Proof of Concept</h3>
+					<p>
+					I was assigned a secret project that was deemed ambitious enough to be the product flagship of HPE.
+					<br/><br/>
+					The idea is to create a platform for higher management to have an oversee on the operations for every client.<br/>
+					There will be 2 applications. One application to collect data from any datasource possible and another<br/>
+					to display these data in an easy to understand but sleek product. 
+					<br/><br/>
+					This project was already lost to India but as a team we were determined to get the project back.
+					<br/><br/>
+					After many sleepless nights even resorting to sleeping and spending days in the office.<br/>
+					We were able to take the project back and further develop it.
+					<br/><br/>
+					As a prize, we won the HPE's finest award and I was presented with an opportunity to be the technical lead of HUD Builder.
+					<br/><br/>
+					Web Application is coded using HTML, CSS, Javascript, Jquery, AJAX, JSON and PHP using Laravel framework.
+					</p>
+				</div>
+			</div>
+
+			<div id="project7">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project7.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>RFC Variant Comparison and Synchro</h3>
+					<p>
+					The use of this tool is SAP related. <br/><br/>
+					An IT specialist daily configures jobs or processes to ensure that the variables have the correct values,<br/>
+					having the problem to configure multiple jobs a day this will result into waste of time and human errors.<br/><br/>
+					This tool RFC Variant Comparison and Synchro ensures that the jobs are configured correctly by checking every environment in the system namely for the testing environment, quality environment and production environment.<br/><br/>
+					This will ensure that every system have the same variables for testing thus will have the same result making issues easy to identify and solve. An IT specialist only needs to configure one system, running this tool will copy all the content of that job then copies it to other environment.<br/><br/>
+					Program is coded using <a href="https://en.wikipedia.org/wiki/ABAP">SAP ABAP</a>.
+					</p>
+				</div>
+			</div>
+
+			<div id="project8">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project8.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Non Prod Transport Management Tool</h3>
+					<p>
+					The use of this tool is SAP related. <br/><br/>
+					When moving new changes from test environment to quality testing and production,<br/> 
+					there is bound to be a conflict of changes.
+					<br/><br/>
+					Just like <a href="https://github.com/">Github</a> but for SAP, the Non Prod Transport Management Tool checks if there is a conflict of the change and emails the specialist alerting him/her of the conflict.<br/><br/>
+					Once alerted, the specialist can proceed with disregarding the changes or alerting the right person of the conflict.
+					This will ensure that no issues will be raised resulted with mishandling new changes.
+					<br/><br/>
+					Program is coded using <a href="https://en.wikipedia.org/wiki/ABAP">SAP ABAP</a>.
+					</p>
+				</div>
+			</div>
+
+			<div id="project9">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project9.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Asset Processing Tool</h3>
+					<p>
+					The use of this tool is SAP related. <br/><br/>
+					This automates the process of Asset related transactions namely ABSO, AS92, AS01, AS02, AS03 and AS04 in SAP.<br/><br/>
+					The specialist only needs to upload an excel file, the system then decodes the excel file and does the responding actions.
+					This assist the specialist to elminate handling the assets one by one which sometimes amount up to 100+ asset transactions per day.<br/><br/>
+					Program is coded using <a href="https://en.wikipedia.org/wiki/ABAP">SAP ABAP</a>.
+					</p>
+				</div>
+			</div>
+
+			<div id="project10">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project10.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>TCJ04/TCJ05 Table Update Tool</h3>
+					<p>
+					The use of this tool is SAP related. <br/><br/>
+					This automates the process of updating a table in SAP <br/>
+					mainly TCJ04 (Person in Responsible for Project) and TCJ05 (Project). <br/><br/>
+					The process of updating TCJ04/TCJ05 table is regarded as routinary work for the specialists thus <br/>
+					this tool eliminates it so they can focus on more urgent tasks.<br/><br/>
+					Program is coded using <a href="https://en.wikipedia.org/wiki/ABAP">SAP ABAP</a>.
+					</p>
+				</div>
+			</div>
+
+			<div id="project11">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project11.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>HUD Builder</h3>
+					<p>
+					As HUD Painter's counterpart, HUD Builder's job is to collect data at any possible datasource.<br/><br/>
+					I was assigned Technical Lead, commanding a total of about 5-6 developers.<br/><br/>
+					As far as was implemented was connection to MySQL, Oracle and Vertica databases.<br/>
+					Connection to File Upload via Excel, Sharepoint, Zabbix, Agile Manager, Slack and<br/> 
+					OAuth 2.0 enabled datasources was also established.<br/><br/>
+					Once these connections are established, the application will provide an API <br/>
+					which will be consumed by HUD Painter.<br/><br/>
+					This is to ensure that all processing is done by HUD Builder to ease system stress for HUD Painter.<br/><br/>
+					Web Application is coded using HTML, CSS, AngularJS, PHP using Laravel framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project12">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project12.png" class="imgproject"/>
+				</div>	
+				<div class="project_desc">
+					<h3>GL Account Activation Tool</h3>
+					<p>
+					The use of this tool is SAP related. <br/><br/>
+					This automates one process important with SAP Finance Team. <br/>
+					This activates General Ledger Accounts for use.<br/><br/>
+					The process of activating General Ledger Accounts is regarded as routinary work for the specialist thus<br/>
+					this tool eliminates it so they can focus on more urgent tasks.<br/><br/>
+					Program is coded using VBA.
+					</p>
+				</div>
+			</div>
+
+			<div id="project13">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project13.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>SNS Macro Tool</h3>
+					<p>
+					This is one of my freelance project with Shell,<br/>
+					This tool automates search and sort for Recipient, Contacted and Responded clients.<br/>
+					The tool will then provide a summary of the search and sort providing an accurate report.<br/><br/>
+					Program is coded using VBA.
+					</p>
+				</div>
+			</div>
+
+			<div id="project14">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project14.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Daily Exception List Tool</h3>
+					<p>
+					The use of this tool is SAP related.<br/><br/>
+					This tool gathers data from SAP which will then be used for reporting,<br/>
+					This prevents miscalculation of the delivery of products and provides an accurate report of Gain or Loss.<br/><br/>
+					Program is coded using VBA.
+					</p>
+				</div>
+			</div>
+
+			<div id="project15">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project15.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>Audit Templating Tool</h3>
+					<p>
+					This tool automatically provides an audit report.<br/><br/>
+					Program is coded using VBA.
+					</p>
+				</div>
+			</div>
+
+			<div id="project16">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project16.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>HPE-SBS Dashboard</h3>
+					<p>
+					This dashboard was created for Nestle project tasks monitoring.<br/><br/>
+					This is to ensure that the project was closely monitored for changes and possible delays.<br/>
+					This will help developers to keep on track the task they have completed and not completed.<br/><br/>
+					Data was extracted from a Microsoft Project Professional file using JAVA. <br/>
+					The data is then processed and saved into the database.<br/><br/>
+					The data from the database is then in turn changed into a beautiful and sleek dashboard display.<br/><br/>
+					Algorithm is coded using JAVA.<br/>
+					Web Application is coded using HTML, CSS, AngularJS, PHP using Laravel framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div id="project17">
+				<div class="project_laptop_img">
+					<img src="img/laptop/project17.png" class="imgproject"/>
+				</div>
+				<div class="project_desc">
+					<h3>MII Task List Dashboard</h3>
+					<p>
+					This dashboard was created for Nestle project tasks monitoring.<br/><br/>
+					This is to ensure that the project was closely monitored for changes and possible delays.<br/>
+					This will help developers to keep on track the task they have completed and not completed.<br/><br/>
+					An excel file was extracted from the Sharepoint Site, which is then processed into data.<br/>
+					The data is then processed and saved into the database.<br/><br/>
+					The data from the database is then in turn changed into a beautiful and sleek dashboard display.<br/><br/>
+					Algorithm is coded using Python.<br/>
+					Web Application is coded using HTML, CSS, AngularJS 2, PHP using Laravel framework and MySQL for the database.
+					</p>
+				</div>
+			</div>
+
+			<div class="projects_arrow">
+				<i class="fa fa-angle-right fa-5x" aria-hidden="true" onclick="nav('right')"></i>
+			</div>
+			
+		</div>
+		</center>
+
+	</div>
+	<!-- PROJECTS END -->
+	<!-- FOOTER STARTS -->
+	<div id="footer">
+		<center>
+		<div class="contact">
+			<h3 style="margin-top: 1%; color: black">Thank you for viewing my profile. Interested? Contact me <u>+974 55766404</u> or click below</h3>
+		</div>
+		<a href="https://www.facebook.com/raph.delvillar">
+			<img style="height: 5.2em; width: 5.2em; padding: 2px;" src="img/fb.png"/>
+		</a>
+		<a href="https://www.linkedin.com/in/raph-wilson-del-villar-4245bb97/">
+			<img style="height: 4.5em; width: 4.5em; padding: 4px; margin-left: 1%" src="img/linkedin.png"/>
+		</a>
+		<a href="mailto:raphdelvillar@gmail.com" target="_top">
+			<img style="height: 4.40em; width: 4.40em; padding: 4px; margin-left: 1%" src="img/gmail.png"/>
+		</a>
+		<a href="file/RESUME.pdf" download>
+			<img style="height: 4.40em; width: 4.40em; padding: 4px; margin-left: 1%" src="img/cv.png"/>
+		</a>
+		</center>
+	</div>
+	<!-- FOOTER ENDS -->
+</body>
+</html>
